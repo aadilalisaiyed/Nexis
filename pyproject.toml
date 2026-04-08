@@ -1,0 +1,17 @@
+[project]
+name = "code-review-env"
+version = "1.0.0"
+description = "Code review RL environment for OpenEnv"
+authors = [{name = "Aadil"}]
+dependencies = [
+    "fastapi",
+    "uvicorn",
+    "pydantic",
+    "httpx",
+    "openai",
+    "pyyaml"
+]
+
+[build-system]
+requires = ["setuptools"]
+build-backend = "setuptools.build_meta"
