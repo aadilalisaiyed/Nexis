@@ -1,7 +1,7 @@
 [project]
 name = "code-review-env"
 version = "1.0.0"
-description = "Code review RL environment for OpenEnv"
+description = "Code review RL environment"
 authors = [{name = "Aadil"}]
 dependencies = [
     "fastapi",
@@ -9,8 +9,12 @@ dependencies = [
     "pydantic",
     "httpx",
     "openai",
-    "pyyaml"
+    "pyyaml",
+    "openenv-core>=0.2.0"
 ]
+
+[project.scripts]
+server = "app.main:app"
 
 [build-system]
 requires = ["setuptools"]
