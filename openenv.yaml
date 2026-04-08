@@ -1,0 +1,25 @@
+name: code-review-env
+version: "1.0.0"
+description: >
+  An RL environment where an AI agent reviews buggy Python code snippets,
+  identifies issues, and suggests fixes. Rewards partial progress.
+
+  sdk: docker   # 🔥 THIS LINE WAS MISSING
+
+tasks:
+  - id: task_easy
+    difficulty: easy
+    description: Find a division-by-zero bug
+  - id: task_medium
+    difficulty: medium
+    description: Identify SQL injection and security flaws
+  - id: task_hard
+    difficulty: hard
+    description: Full multi-issue architecture + concurrency review
+observation_space:
+  type: object
+  fields: [task_id, code_snippet, language, instructions, feedback_history, step_number]
+action_space:
+  type: object
+  fields: [comment, severity, line_numbers, suggested_fix]
+reward_range: [0.0, 1.0]
