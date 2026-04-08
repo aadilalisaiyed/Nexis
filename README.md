@@ -1,3 +1,15 @@
+---
+title: Code Review Env
+emoji: 👀
+colorFrom: blue
+colorTo: pink
+sdk: docker
+pinned: false
+license: mit
+---
+
+Check out the configuration reference at https://huggingface.co/docs/hub/spaces-config-reference
+
 # Code Review Environment — OpenEnv
 
 An RL environment where an AI agent reviews real buggy Python code snippets, identifies issues, and suggests fixes. Built on the [OpenEnv](https://openenv.ai) spec for training and evaluating language model agents on realistic software engineering tasks.
